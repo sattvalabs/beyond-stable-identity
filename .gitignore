@@ -1,0 +1,15 @@
+# Credentials and local environment files
+*.env
+.env*
+ctp-identity-pilot.txt
+*api-key*
+*apikey*
+
+# Generated local outputs
+code/pilot-results/
+code/compatibility-results-*/
+code/formal-results-*/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
