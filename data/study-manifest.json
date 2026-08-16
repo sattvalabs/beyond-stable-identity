@@ -1,0 +1,184 @@
+﻿{
+    "study":  "CTP Identity Study",
+    "dataset_type":  "formal",
+    "status":  "completed",
+    "started_at_utc":  "2026-08-15T15:23:04.6461222Z",
+    "access_method":  "OpenRouter API",
+    "randomization_method":  "Fisher-Yates shuffle using System.Random",
+    "random_seed":  20260815,
+    "design":  "3 models x 2 conditions x 3 repetitions",
+    "planned_conversations":  18,
+    "settings":  {
+                     "temperature":  0.7,
+                     "max_tokens":  600,
+                     "reasoning_exclude":  true
+                 },
+    "controls":  {
+                     "empty_history_at_start":  true,
+                     "same_prompt_order_except_turn_4":  true,
+                     "tools_available":  false,
+                     "web_search":  false,
+                     "external_files":  false,
+                     "retrieval":  false,
+                     "persistent_memory":  false
+                 },
+    "protocol_development":  [
+                                 "Exploratory runs were excluded from the formal dataset.",
+                                 "The output allowance was increased from 300 to 600 after an exploratory response was truncated.",
+                                 "Windows UTF-8 response decoding was corrected before formal data collection.",
+                                 "Initial formal attempts were excluded after HTTP 400 errors during conversation C002.",
+                                 "A compatibility check identified incorrect outgoing JSON character encoding in Windows PowerShell.",
+                                 "The formal client explicitly sends UTF-8 bytes and excludes returned reasoning blocks while preserving visible conversational history.",
+                                 "The prompts were not changed after the exploratory runs."
+                             ],
+    "run_plan":  [
+                     {
+                         "run_order":  1,
+                         "blind_id":  "C001",
+                         "model_label":  "Claude Sonnet 5",
+                         "model_id":  "anthropic/claude-sonnet-5",
+                         "condition":  "control",
+                         "repetition":  3
+                     },
+                     {
+                         "run_order":  2,
+                         "blind_id":  "C002",
+                         "model_label":  "GPT-5.4",
+                         "model_id":  "openai/gpt-5.4",
+                         "condition":  "experimental",
+                         "repetition":  3
+                     },
+                     {
+                         "run_order":  3,
+                         "blind_id":  "C003",
+                         "model_label":  "GPT-5.4",
+                         "model_id":  "openai/gpt-5.4",
+                         "condition":  "control",
+                         "repetition":  2
+                     },
+                     {
+                         "run_order":  4,
+                         "blind_id":  "C004",
+                         "model_label":  "DeepSeek V4 Pro",
+                         "model_id":  "deepseek/deepseek-v4-pro",
+                         "condition":  "experimental",
+                         "repetition":  1
+                     },
+                     {
+                         "run_order":  5,
+                         "blind_id":  "C005",
+                         "model_label":  "GPT-5.4",
+                         "model_id":  "openai/gpt-5.4",
+                         "condition":  "experimental",
+                         "repetition":  2
+                     },
+                     {
+                         "run_order":  6,
+                         "blind_id":  "C006",
+                         "model_label":  "DeepSeek V4 Pro",
+                         "model_id":  "deepseek/deepseek-v4-pro",
+                         "condition":  "control",
+                         "repetition":  3
+                     },
+                     {
+                         "run_order":  7,
+                         "blind_id":  "C007",
+                         "model_label":  "DeepSeek V4 Pro",
+                         "model_id":  "deepseek/deepseek-v4-pro",
+                         "condition":  "control",
+                         "repetition":  1
+                     },
+                     {
+                         "run_order":  8,
+                         "blind_id":  "C008",
+                         "model_label":  "GPT-5.4",
+                         "model_id":  "openai/gpt-5.4",
+                         "condition":  "control",
+                         "repetition":  3
+                     },
+                     {
+                         "run_order":  9,
+                         "blind_id":  "C009",
+                         "model_label":  "Claude Sonnet 5",
+                         "model_id":  "anthropic/claude-sonnet-5",
+                         "condition":  "experimental",
+                         "repetition":  1
+                     },
+                     {
+                         "run_order":  10,
+                         "blind_id":  "C010",
+                         "model_label":  "Claude Sonnet 5",
+                         "model_id":  "anthropic/claude-sonnet-5",
+                         "condition":  "experimental",
+                         "repetition":  2
+                     },
+                     {
+                         "run_order":  11,
+                         "blind_id":  "C011",
+                         "model_label":  "DeepSeek V4 Pro",
+                         "model_id":  "deepseek/deepseek-v4-pro",
+                         "condition":  "experimental",
+                         "repetition":  2
+                     },
+                     {
+                         "run_order":  12,
+                         "blind_id":  "C012",
+                         "model_label":  "GPT-5.4",
+                         "model_id":  "openai/gpt-5.4",
+                         "condition":  "control",
+                         "repetition":  1
+                     },
+                     {
+                         "run_order":  13,
+                         "blind_id":  "C013",
+                         "model_label":  "DeepSeek V4 Pro",
+                         "model_id":  "deepseek/deepseek-v4-pro",
+                         "condition":  "experimental",
+                         "repetition":  3
+                     },
+                     {
+                         "run_order":  14,
+                         "blind_id":  "C014",
+                         "model_label":  "Claude Sonnet 5",
+                         "model_id":  "anthropic/claude-sonnet-5",
+                         "condition":  "control",
+                         "repetition":  1
+                     },
+                     {
+                         "run_order":  15,
+                         "blind_id":  "C015",
+                         "model_label":  "Claude Sonnet 5",
+                         "model_id":  "anthropic/claude-sonnet-5",
+                         "condition":  "control",
+                         "repetition":  2
+                     },
+                     {
+                         "run_order":  16,
+                         "blind_id":  "C016",
+                         "model_label":  "DeepSeek V4 Pro",
+                         "model_id":  "deepseek/deepseek-v4-pro",
+                         "condition":  "control",
+                         "repetition":  2
+                     },
+                     {
+                         "run_order":  17,
+                         "blind_id":  "C017",
+                         "model_label":  "Claude Sonnet 5",
+                         "model_id":  "anthropic/claude-sonnet-5",
+                         "condition":  "experimental",
+                         "repetition":  3
+                     },
+                     {
+                         "run_order":  18,
+                         "blind_id":  "C018",
+                         "model_label":  "GPT-5.4",
+                         "model_id":  "openai/gpt-5.4",
+                         "condition":  "experimental",
+                         "repetition":  1
+                     }
+                 ],
+    "completed_at_utc":  "2026-08-15T15:32:41.5696074Z",
+    "completed_conversations":  18,
+    "failed_conversations":  0,
+    "total_reported_cost":  0.18169024820000004
+}
