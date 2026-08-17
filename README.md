@@ -8,7 +8,7 @@ The study tests whether assistant identity is better described as a dynamic conf
 
 ## Repository contents
 
-- `paper/`: final paper in PDF and DOCX formats.
+- `paper/`: final paper in PDF format.
 - `code/`: model-compatibility checks, pilot generation, and formal-study generation scripts.
 - `data/formal-dataset.json`: complete machine-readable formal dataset.
 - `data/raw-json/`: raw response records for all 18 formal conversations.
